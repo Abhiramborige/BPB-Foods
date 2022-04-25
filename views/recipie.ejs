@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recipe</title>
+    <%- include("headers.ejs") %>
+  </head>
+  <body>
+    <%- include ("icons.svg") %> <%- include ("footer.svg") %> <%- include
+    ("navbar.ejs"), {count: count, user: user} %>
+    <hr class="featurette-divider">
+    <% if(recipe!==null) { %>
+        <div class="container marketing">
+        <div class=" container row featurette">
+        <div class="col-md-7 order-md-2 content">
+            <h2 class="featurette-heading">
+            <%- recipe.name %><br>
+            <span class="text-muted">- Brain Foods</span>
+            </h2>
+            <p class="lead">
+              <%- recipe.info %>
+            </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img
+            src="<%- recipe.image %>"
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            width="300"
+            height="300"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            />
+        </div>
+        </div>
+        </div>
+        <div class="px-4 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold"><%- recipe.name %></h1>
+            <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">
+                Rs. <%- recipe.price %>
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button type="button" class="btn btn-primary btn-lg px-4 gap-3 addToCart" value="<%- recipe.id %>">
+                Add to cart
+                </button>
+            </div>
+            </div>
+        </div>
+        <div class="container px-4 py-5" id="featured-3">
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+              <h2>Recipe Info</h2>
+              <p><%- recipe.info %></p>
+            </div>
+            <div class="feature col">
+              <h2>Return & Refund policy</h2>
+              <p>No refunds available right now!</p>
+            </div>
+            <div class="feature col">
+              <h2>Shipping Info</h2>
+              <p>Please provide address along with pincode for a faster delivery. No shipping charges applicable for products/cart order above 1000.</p>
+            </div>
+          </div>
+        </div>
+    <% } else { %>
+        <div class=" container row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">
+            Recipe not found
+            <span class="text-muted">Go to products seciton.</span>
+            </h2>
+        </div>
+        </div>
+    <% } %>
+    <script src="recipie.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+{
+    "products": [
+      {
+        "id":1,
+        "name": "BRAIN-HEALTHY CHICKEN SOUP",
+        "price": 250,
+        "image": "images/recipes/chicken_soup.jpg",
+        "info":"A good old fashioned Chicken soup combined with ayurvedic principles"
+      },
+      {
+        "id":2,
+        "name": "HIGH-FIBER CHOCOLATE MOUSSE",
+        "price": 400,
+        "image": "images/recipes/chocolate_mousse.jpg",
+        "info":  "A rich silky and smooth avacado chocolate mousse "
+      },
+      {
+        "id":3,
+        "name": "ALASKAN SALMON",
+        "price": 600,
+        "image": "images/recipes/Alaskan_Salmon.jpg",
+        "info":  "An Omega-3 rich Deep water Fish"
+      },
+      {
+        "id":4,
+        "name": "RAINBOW BUDDHA BOWL",
+        "price": 500,
+        "image": "images/recipes/rainbow_bowl.jpg",
+        "info": "Thier dish the Goddess inspired bowl recipe"
+      },
+      {
+        "id":5,
+        "name": "NOURISHING GREEN SMOOTHIE",
+        "price": 300,
+        "image": "images/recipes/green_smoothie.jpg",
+        "info":"A conventional nutritional delicious snack"
+      },
+      {
+        "id":6,
+        "name": "BIRCHER MUESLI",
+        "price": 500,
+        "image": "images/recipes/bircher_muesli.jpg",
+        "info":"An uncooked mixture of nuts, seeds, grains, dried fruits and spices."
+      }
+    ]
+  }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <%- include("headers.ejs") %>
+  </head>
+  <body>
+    <%- include("icons.svg") %>
+    <%- include("footer.svg") %>
+    <%- include("navbar.ejs"), {count: count, user: user} %>
+  
+    <section>
+      <div class="px-4 py-5 my-5 text-center home">
+        <img
+          class="d-block mx-auto mb-4 logo"
+          src="images/BPBFOODS.png"
+          alt=""
+          width="200"
+          height="200"
+        />
+        <h1 class="display-5 fw-bold">BPB Foods</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4 para">
+             BPB Foods is a service oriented start-up which aims to provide brain foods in the cafeterias of corporate offices so that the conventional instantaneous foods can be replaced with foods and recipes that actually helps the employee improve their overall well-being also satisfying the desire to eat their favourite type of cuisines.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container py-4">
+      <div class="p-5 mb-2 bg-light rounded-3">
+        <div class="container-fluid py-5">
+          <p class="col-md-8 fs-4">The human brain requires 45 distinctnutrients to function best. While most of these nutrients are created by the brain itself, the rest are imported from our diet.</p>
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 mb-3">Aim</h1>
+            <p class="col-lg-10 fs-4">This project is aimed to assist employees working in the corporate sector tackle their workplace stress by providing brain foods</p>
+          </div>
+          <div class="col-md-10 mx-auto col-lg-5">
+            <form class="p-4 p-md-5 border rounded-3 bg-light" action="/register" method="post"  enctype="application/json">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="username">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+              
+              <small class="text-dark">Have account? <a href="/login">Login here.</a></small><hr class="my-4">
+              <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+            </form>
+          </div>
+        </div>
+      </div>    
+    </section>
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+              <img src="images/BPBFOODS.png"
+                class="bi me-2 logo"
+                width="50"
+                height="50"
+                role="img">
+            </a>
+            <span class="text-muted">&copy; 2022 BPB Foods, Inc</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+          </ul>
+        </footer>
+    </div>
+  </body>
+</html>

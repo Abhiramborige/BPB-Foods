@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("headers.ejs") %>
+    <title>Recipes</title>
+  </head>
+  <body class="text-center">
+    <%- include ("icons.svg") %> 
+    <%- include ("footer.svg") %> 
+    <%- include ("navbar.ejs"), {count: count, user: user} %>
+    <main>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Our Recipes</h1>
+            <p class="lead text-muted">
+              The foods we eat can have a big impact on our energy, the quality of our health, and the function of our brains.
+            </p>
+            <p>
+              <a href="#" class="btn btn-primary my-2">Main call to action</a>
+              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-6">
+            <% for(var i=0; i < products.length; i++) { %>
+                <div class="col">
+                <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top"
+                    focusable="false"
+                    src= <%- products[i].image %> 
+                    />
+                    <div class="card-body">
+                    <p class="card-text">
+                        <%- products[i].name %>
+                        Rs. <%- products[i].price %>
+                    </p>
+                    <div
+                        class="d-flex justify-content-between align-items-center"
+                    >
+                        <div class="btn-group">
+                        <a href="/<%- products[i].id %>" >
+                            <button
+                                type="button"
+                                class="btn btn-sm btn-outline-secondary"
+                            >
+                                View
+                            </button>
+                        </a>
+                        <button
+                            type="button"
+                            class="btn btn-sm btn-outline-secondary addToCart"
+                            value="<%- products[i].id %>"
+                        >
+                            Add to Cart
+                        </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="recipie.js"></script>
+  </body>
+</html>
